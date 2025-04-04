@@ -5,63 +5,195 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Barbero</title>
     <style>
-        /* Add some basic styling for the banner */
-        .banner, .Blender_image {
-            width: 100%;
-            height: auto;
-        }
-        /* Change the background color of the page */
         body {
         background-color: #202020; /* Dark gray background */
         }
-        #profile,#Blender h1 {
-        font-size: 24px;
+        .banner {
+            width: auto;
+            height: 150px;
+        }
+        .profile-container {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        }
+        .profile-image {
+        width: 300px;
+        height: auto;
+        border-radius: 50%; /* Makes the image circular */
+        object-fit: cover; /* Ensures the image fits within the circle */
+        }
+        .Blender, .unreal, .Drawing, .profile, .twine,  h1 {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 28px;
         color: white;
         }
-        #profile,#Blender p {
+        .Blender, .unreal, .Drawing, .profile, .twine,  p {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-size: 16px;
-        color: lightcyan;
+        color: white;
+        }
+        /* carosuel styling */
+        #carousel1, #carousel2, #carousel3 {
+        position: relative;
+        text-align: center;
+        margin: 20px auto;
+        max-width: 920px;
+        }
+
+        .carousel-container {
+        position: relative;
+        overflow: hidden;
+        }
+
+        .carousel-image {
+        width: 100%;
+        display: none;
+        }
+
+        .image {
+        width: 80%;
+        height: auto;
+        position: relative;
+        overflow: hidden;
+        }
+
+        .carousel-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        padding: 10px;
+        cursor: pointer;
+        font-size: 18px;
+        }
+
+        .carousel-button.prev {
+        left: 10px;
+        }
+
+        .carousel-button.next {
+        right: 10px;
+        }
+
+        .carousel-button:hover {
+        background-color: rgba(0, 0, 0, 0.8);
         }
     </style>
 </head>
+
 <body>
-    <!-- Banner Picture -->
-    <header>
-        <img src="C:\Users\Santiago Barbero\Documents\Unraf\Programacion 1\Repositorio\dia de campo 2.png" alt="Banner Picture" class="banner">
-    </header>
-<!-- Profile Section -->
-<section id="profile">
-    <h1>Game DEV Porfolio</h1>
-	<img src="Unkwonyet" alt="Profile_Pickture">
-	<p> Name: Santiago Barbero</p>
-	<p>	Nationaliti: Argentina</p>
-	<p>	born: 18/07/1999</p>
-	<p>	Mail: Santiagoarielbarbero@outlook.com <link rel="www.outlooklive.com" href="Santiagoarielbarbero@outlook.com"></p>
-	<p> Instagram: @santibarbero99 <link rel="@santibarbero99" href="instagram.com\@santibarbero99"> </p>
-    <p>Hello! My name is Santiago Barbero. I am a game developer (ongoin). Welcome to my portfolio!</p>
-    <p>Here i show you my skils in diferents areas</p>
-</section> link
-<section id="Blender">
-    <h1><img src="C:\Users\Santiago Barbero\Documents\Unraf\Programacion 1\Repositorio\blender logo.png" alt="Logo_Blender" class="Logo"> Blender Proyecs: </h1>
-        <img src="C:\Users\Santiago Barbero\Documents\Unraf\Programacion 1\Repositorio\transformaciones del tridente concep.png" alt="Concepto" class="Blender_image">
-        <img src="C:\Users\Santiago Barbero\Documents\Unraf\Programacion 1\Repositorio\devil Crown-spera.png" alt="Concepto" class="Blender_image">
-        <img src="C:\Users\Santiago Barbero\Documents\Unraf\Programacion 1\Repositorio\Proceso_001.png" alt="Concepto" class="Blender_image">
-        <loopvideo src="C:\Users\Santiago Barbero\Documents\Unraf\Programacion 1\Repositorio\Test_fuego Corona Tridente.mp4" alt="Video" class="Blender_Video">
+    <section id="profile">
+        <h1>Game-DEV Portfolio</h1>
+        <div class="profile-container">
+            <img src="./Repositorio/Profile_Picture.jpeg" alt="Profile Picture" class="profile-image">
+            <div class="profile-text">
+                <p>Name: Santiago Barbero</p>
+                <p>Nationality: Argentina</p>
+                <p>Born: 18/07/1999</p>
+                <p>Mail: <a href="mailto:Santiagoarielbarbero@outlook.com">Santiagoarielbarbero@outlook.com</a></p>
+                <p>Instagram: <a href="https://instagram.com/santibarbero99" target="_blank">@santibarbero99</a></p>
+                <p>Hello! My name is Santiago Barbero. I am a game developer (ongoing). Welcome to my portfolio!</p>
+                <p>Here I show you my skills in different areas.</p>
+            </div>
+        </div>
 </section>
-<section id="unreal">
-	<h1> Proyects Unreal Engine</h1>
+    <section id="Blender">
+     <img src="./Repositorio/blender logo.png" alt="Logo_Blender" class="banner">
+         <div id="carousel1">
+             <div class="carousel-container">
+                <img src="./Repositorio/Blenderimg_00.png" alt="Image 1" class="carousel-image">
+                <img src="./Repositorio/Blenderimg_01.png  " alt="Image 2" class="carousel-image">
+                <img src="./Repositorio/Blenderimg_02.png" alt="Image 3" class="carousel-image">
+                <img src="./Repositorio/Blenderimg_03.png" alt="Image 3" class="carousel-image">
+                <img src="./Repositorio/Blenderimg_04.png" alt="Image 3" class="carousel-image">
+                <img src="./Repositorio/Blenderimg_05.png" alt="Image 3" class="carousel-image">
+                <img src="./Repositorio/Blenderimg_06.png" alt="Image 3" class="carousel-image">
+                <img src="./Repositorio/Blenderimg_07.png" alt="Image 3" class="carousel-image">
+                <img src="./Repositorio/Blenderimg_08.jpg" alt="Image 3" class="carousel-image">
+                <img src="./Repositorio/Blenderimg_09.png" alt="Image 3" class="carousel-image">
+                <img src="./Repositorio/Blenderimg_10.png" alt="Image 3" class="carousel-image">
+                <img src="./Repositorio/Blenderimg_11.png" alt="Image 3" class="carousel-image">
+                <img src="./Repositorio/Blenderimg_12.png" alt="Image 3" class="carousel-image">
+                <img src="./Repositorio/Blenderimg_13.png" alt="Image 3" class="carousel-image">
+                <img src="./Repositorio/Blenderimg_14.png" alt="Image 3" class="carousel-image">
+                <img src="./Repositorio/Blenderimg_15.png" alt="Image 3" class="carousel-image">
+                <img src="./Repositorio/Blenderimg_16.png" alt="Image 3" class="carousel-image">
+                <img src="./Repositorio/Blenderimg_17.png" alt="Image 3" class="carousel-image">
+                <img src="./Repositorio/Blenderimg_18.png" alt="Image 3" class="carousel-image">
+                <img src="./Repositorio/Blenderimg_19.png" alt="Image 3" class="carousel-image">
+                <img src="./Repositorio/Blenderimg_20.png" alt="Image 3" class="carousel-image">
+                <img src="./Repositorio/Blenderimg_21.png" alt="Image 3" class="carousel-image">
+                <img src="./Repositorio/Blenderimg_22.png" alt="Image 3" class="carousel-image">
+                <video src="./Repositorio/Blenderimg_23.mp4" alt="Image 3" class="carousel-image">
+             </div>
+            <button class="carousel-button prev" onclick="prevImage(0)">&#10094;</button>
+            <button class="carousel-button next" onclick="nextImage(0)">&#10095;</button>
+          </div>
 </section>
-<section id="Drawing">
-	<h1> 2D Assets</h1>
-	<h1> Pixel art and Animation</h1>
-	<h1> Splasharts</h1>
-	<img src="" alt="">
-	<h1> Comic concept</h1>
-<section id="Twine">
-	<h1> Twine Proyec</h1>
-	<img src="C:\Users\Santiago Barbero\Documents\Unraf\Programacion 1\Repositorio\TP2 - Portada.png" alt="Twine_Proyect">
-	<link rel="stylesheet" href="">
+    <section id="unreal">
+    <img src="./Repositorio/Logo_unreal.png" alt="IMG Fail" class="banner">
+    <div id="carousel2">
+        <div class="carousel-container">
+         <video src="./Repositorio/UnrealVid_01.mp4" alt="Image 1" class="carousel-image"></video>
+         <video src="./Repositorio/UnrealVid_02.mp4" alt="Image 1" class="carousel-image"></video>
+         <video src="./Repositorio/UnrealVid_03.mp4" alt="Image 1" class="carousel-image"></video> 
+         <video src="./Repositorio/UnrealVid_01.mp4" alt="Image 1" class="carousel-image"></video>
+        </div>
+        <button class="carousel-button prev" onclick="prevImage(1)">&#10094;</button>
+        <button class="carousel-button next" onclick="nextImage(1)">&#10095;</button>
+    </div>
 </section>
+    <section id="Drawing">
+        <img src="./Repositorio/Logo_Krita.png" alt="IMG Fail" class="banner">
+        <div id="carousel3">
+            <div class="carousel-container">
+                <img src="./Repositorio/KritaImg_00.png" alt="Image 1" class="carousel-image">
+                <img src="./Repositorio/KritaImg_01.png" alt="Image 2" class="carousel-image">
+                <img src="./Repositorio/KritaImg_03.jpg" alt="Image 3" class="carousel-image">
+                <img src="./Repositorio/KritaImg_04.png" alt="Image 3" class="carousel-image">
+                <img src="./Repositorio/KritaImg_05.png" alt="Image 3" class="carousel-image">
+                <img src="./Repositorio/KritaImg_06.jpg" alt="Image 3" class="carousel-image">
+                <img src="./Repositorio/KritaImg_07.jpg" alt="Image 3" class="carousel-image">
+                <img src="./Repositorio/KritaImg_08.jpg" alt="Image 3" class="carousel-image">
+                <img src="./Repositorio/KritaImg_09.jpg" alt="Image 3" class="carousel-image">
+                <img src="./Repositorio/KritaImg_10.jpg" alt="Image 3" class="carousel-image">
+            </div>
+            <button class="carousel-button prev" onclick="prevImage(2)">&#10094;</button>
+            <button class="carousel-button next" onclick="nextImage(2)">&#10095;</button>
+        </div>
 </section>
+    <section id="Twine">
+        <img src="./Repositorio/twine-logo.jpg" alt="IMG Fail" class="banner">
+        <h1>Juego: <a href="https://barbero-santiago.itch.io/tp2-narrativa-punto-sin-retorno"> Punto Sin Retorno</a></h1>
+        <img src="./Repositorio/TP2 - Portada.png" alt="Image Fail" class="image">
+</section>
+<script>
+    // JavaScript for Multiple Carousels
+    const carousels = document.querySelectorAll('.carousel-container');
+    const carouselImages = Array.from(carousels).map(carousel => carousel.querySelectorAll('.carousel-image'));
+    const currentIndexes = Array(carousels.length).fill(0);
+
+    function showImage(carouselIndex, imageIndex) {
+        const images = carouselImages[carouselIndex];
+        images.forEach((img, i) => {
+            img.style.display = i === imageIndex ? 'block' : 'none';
+        });
+    }
+
+    function prevImage(carouselIndex) {
+        currentIndexes[carouselIndex] = (currentIndexes[carouselIndex] - 1 + carouselImages[carouselIndex].length) % carouselImages[carouselIndex].length;
+        showImage(carouselIndex, currentIndexes[carouselIndex]);
+    }
+
+    function nextImage(carouselIndex) {
+        currentIndexes[carouselIndex] = (currentIndexes[carouselIndex] + 1) % carouselImages[carouselIndex].length;
+        showImage(carouselIndex, currentIndexes[carouselIndex]);
+    }
+
+    // Initialize all carousels
+    carousels.forEach((_, index) => showImage(index, 0));
+</script>
 </body>
-</html
+</html>
